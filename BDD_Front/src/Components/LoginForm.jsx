@@ -27,8 +27,8 @@ const LoginForm = ({ onSubmit }) => {
 
             if (response.ok) {
                 const data = await response.json();
-                navigate("/")
-                onSubmit(data); // Llama a la función onSubmit si la autenticación es exitosa
+                navigate("/home")
+                onSubmit(data); 
             } else {
                 setErrorMessage("Correo o contraseña incorrectos");
             }

@@ -15,6 +15,7 @@ const RegisterForm = () => {
 
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -65,6 +66,7 @@ const RegisterForm = () => {
       });
     } else {
       const data = await response.json();
+      navigate("/login")
       setErrorMessage(data.detail || "Hubo un error al registrar.");
     }
   };
