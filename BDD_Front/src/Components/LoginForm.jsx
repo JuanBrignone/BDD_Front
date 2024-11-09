@@ -69,9 +69,16 @@ const LoginForm = ({ onSubmit }) => {
                     required
                 />
             </div>
-
             <button type="submit" className="login-form-button">
                 Ingresar
+            </button>
+
+            <button
+                type="button"
+                className="login-form-button secondary"
+                onClick={() => navigate("/register")}
+            >
+                No tengo cuenta
             </button>
         </form>
     );

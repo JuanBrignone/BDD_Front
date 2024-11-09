@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <div>
-        <h1>PAGINA PRINCIPAL</h1>
+        <h1>ESCUELA DE DEPORTES</h1>
     <Router>
       <Routes>
         <Route path="/register" element={<RegisterForm />} />

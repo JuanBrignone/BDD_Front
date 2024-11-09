@@ -75,3 +75,12 @@ p[style*="color: green"] {
     color: green;
 }
 
+.atras-form-button.secondary {
+    background-color: #6c757d;
+    color: white;
+    margin-top: 10px;
+}
+
+.atras-form-button.secondary:hover {
+    background-color: #5a6268;
+}

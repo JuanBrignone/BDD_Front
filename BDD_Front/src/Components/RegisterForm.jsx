@@ -166,6 +166,14 @@ const RegisterForm = () => {
         {successMessage && <p style={{ color: "green" }}>{successMessage}</p>}
 
         <button type="submit">Registrar</button>
+
+        <button
+                type="button"
+                className="atras-form-button secondary"
+                onClick={() => navigate(-1)}
+            >
+                Atras
+            </button>
       </form>
     </div>
   );

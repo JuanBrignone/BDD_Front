@@ -65,3 +65,13 @@
     font-size: 14px;
     margin-bottom: 15px;
 }
+
+.login-form-button.secondary {
+    background-color: #6c757d;
+    color: white;
+    margin-top: 10px;
+}
+
+.login-form-button.secondary:hover {
+    background-color: #5a6268;
+}
