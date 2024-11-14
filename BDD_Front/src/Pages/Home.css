@@ -6,7 +6,7 @@
 .cards-container {
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    grid-template-columns: repeat(3, 1fr); 
 }
 
 .card {
@@ -20,7 +20,7 @@
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Pequeña animación al pasar el mouse */
+    transform: translateY(-5px); 
 }
 
 .card-title {
@@ -41,15 +41,15 @@
     color: #007bff;
 }
 
-/* Ajustes para diferentes tamaños de pantalla */
+
 @media (max-width: 1200px) {
     .cards-container {
-        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 
 @media (max-width: 768px) {
     .cards-container {
-        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+        grid-template-columns: 1fr; 
     }
 }

@@ -10,21 +10,21 @@ form {
     gap: 15px; 
 }
 
-/* Título del formulario */
+
 h2 {
     text-align: center;
     font-size: 24px;
     margin-bottom: 20px;
-    grid-column: span 2; /* Hacemos que el título ocupe ambas columnas */
+    grid-column: span 2; 
 }
 
-/* Contenedores de cada campo */
+
 div {
     display: flex;
-    flex-direction: column; /* Los campos dentro del contenedor estarán en columna */
+    flex-direction: column; 
 }
 
-/* Etiquetas de los campos */
+
 label {
     display: block;
     font-size: 16px;
@@ -32,7 +32,7 @@ label {
     color: #333;
 }
 
-/* Estilos para los inputs */
+
 input {
     width: 100%;
     padding: 10px;
@@ -42,7 +42,7 @@ input {
     box-sizing: border-box;
 }
 
-/* Estilo para el botón */
+
 button {
     width: 100%;
     padding: 12px;
@@ -52,7 +52,7 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    grid-column: span 2; /* Hacemos que el botón ocupe ambas columnas */
+    grid-column: span 2; 
 }
 
 button:disabled {
@@ -60,7 +60,7 @@ button:disabled {
     cursor: not-allowed;
 }
 
-/* Mensajes de error y éxito */
+
 p {
     text-align: center;
     font-size: 16px;
