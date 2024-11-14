@@ -20,6 +20,38 @@ const HomeClases = () => {
         fetchClases();
     }, []);
 
+    const handleInscribir = async (id_clase) => {
+        const ci_alumno = prompt("Por favor, ingresa tu CI:");
+    
+        if (!ci_alumno) {
+            alert("CI es requerido.");
+            return;
+        }
+    
+        try {
+            const response = await fetch("http://localhost:8000/inscribir_alumno", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    id_clase: parseInt(id_clase),
+                    ci_alumno: parseInt(ci_alumno), // Asegúrate de que sea un número entero
+                    id_equipamiento: null // Cambia según sea necesario
+                })
+            });
+    
+            if (response.ok) {
+                alert("Te has inscrito exitosamente.");
+            } else {
+                const errorData = await response.json();
+                alert(errorData.detail || "Error al inscribirse.");
+            }
+        } catch (error) {
+            console.error("Error al inscribirse:", error);
+            alert("Hubo un error al procesar la inscripción.");
+        }
+    };
+
+
     return (
         <div className="home-clases-container">
             <h1>Clases Disponibles</h1>
@@ -33,6 +65,7 @@ const HomeClases = () => {
                         hora_inicio={clase.hora_inicio}
                         hora_fin={clase.hora_fin}
                         costo_actividad={clase.costo_actividad}
+                        onInscribir={() => handleInscribir(clase.id_clase)}
                     />
                 ))}
             </div>
