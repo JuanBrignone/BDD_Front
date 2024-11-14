@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import RegisterForm from './Components/RegisterForm';
 import LoginForm from './Components/LoginForm';
 import Home from './Pages/Home';
+import HomeClases from './Pages/HomeClases';
 
 
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/register" element={<RegisterForm />} />
         <Route path="/" element={<LoginForm />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/clases" element={<HomeClases />} />
       </Routes>
     </Router>
       </div>

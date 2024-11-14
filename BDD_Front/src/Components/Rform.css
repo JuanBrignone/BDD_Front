@@ -1,14 +1,13 @@
-/* Contenedor principal del formulario */
 form {
-    max-width: 600px; /* Ajustamos el ancho máximo */
+    max-width: 600px; 
     margin: 0 auto;
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: grid; /* Usamos Grid Layout */
-    grid-template-columns: 1fr 1fr; /* Creamos dos columnas de igual tamaño */
-    gap: 15px; /* Espacio entre columnas y filas */
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px; 
 }
 
 /* Título del formulario */
