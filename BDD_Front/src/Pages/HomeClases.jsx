@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CardClases from "../Components/CardClases";
 import "./HomeClases.css";
+import Navbar from "../Components/Navbar";
 
 const HomeClases = () => {
   const [clases, setClases] = useState([]);
@@ -75,66 +76,69 @@ const HomeClases = () => {
   };
 
   return (
-    <div className="home-clases-container">
-      <h1>Clases Disponibles</h1>
-      {error && <p className="error-message">{error}</p>}
-      <div className="cards-container">
-        {clases.map((clase) => (
-          <CardClases
-            key={clase.id_clase}
-            nombre_actividad={clase.nombre_actividad}
-            nombre_instructor={clase.nombre_instructor}
-            hora_inicio={clase.hora_inicio}
-            hora_fin={clase.hora_fin}
-            costo_actividad={clase.costo_actividad}
-            onInscribir={() => handleInscribir(clase)}
-          />
-        ))}
-      </div>
-
-      {showForm && (
-        <div className="inscripcion-form">
-          <h2>Inscripción a {selectedClase.nombre_actividad}</h2>
-          <form onSubmit={(e) => e.preventDefault()}>
-            <label>
-              CI Alumno:
-              <input
-                type="text"
-                value={ciAlumno}
-                onChange={(e) => setCiAlumno(e.target.value)}
-                placeholder="Ingresa tu CI"
-                required
-              />
-            </label>
-
-            <select
-              onChange={(e) => setSelectedEquipamiento(e.target.value)}
-              required
-            >
-              <option value="">Selecciona un equipamiento</option>
-              {specificEquipamiento.map((equip) => (
-                <option
-                  key={equip.id_equipamiento}
-                  value={equip.id_equipamiento}
-                >
-                  {equip.nombre}
-                </option>
-              ))}
-            </select>
-
-            <button type="button" onClick={handleSubmitInscripcion}>
-              Inscribirse
-            </button>
-            <button
-              type="button"
-              className="cancelar"
-              onClick={() => setShowForm(false)}
-            >
-              Cancelar
-            </button>
-          </form>
+    <div>
+        <Navbar/>
+        <div className="home-clases-container">
+        <h1>Clases Disponibles</h1>
+        {error && <p className="error-message">{error}</p>}
+        <div className="cards-container">
+            {clases.map((clase) => (
+            <CardClases
+                key={clase.id_clase}
+                nombre_actividad={clase.nombre_actividad}
+                nombre_instructor={clase.nombre_instructor}
+                hora_inicio={clase.hora_inicio}
+                hora_fin={clase.hora_fin}
+                costo_actividad={clase.costo_actividad}
+                onInscribir={() => handleInscribir(clase)}
+            />
+            ))}
         </div>
-      )}
+
+        {showForm && (
+            <div className="inscripcion-form">
+            <h2>Inscripción a {selectedClase.nombre_actividad}</h2>
+            <form onSubmit={(e) => e.preventDefault()}>
+                <label>
+                CI Alumno:
+                <input
+                    type="text"
+                    value={ciAlumno}
+                    onChange={(e) => setCiAlumno(e.target.value)}
+                    placeholder="Ingresa tu CI"
+                    required
+                />
+                </label>
+
+                <select
+                onChange={(e) => setSelectedEquipamiento(e.target.value)}
+                required
+                >
+                <option value="">Selecciona un equipamiento</option>
+                {specificEquipamiento.map((equip) => (
+                    <option
+                    key={equip.id_equipamiento}
+                    value={equip.id_equipamiento}
+                    >
+                    {equip.nombre}
+                    </option>
+                ))}
+                </select>
+
+                <button type="button" onClick={handleSubmitInscripcion}>
+                Inscribirse
+                </button>
+                <button
+                type="button"
+                className="cancelar"
+                onClick={() => setShowForm(false)}
+                >
+                Cancelar
+                </button>
+            </form>
+            </div>
+        )}
+        </div>
     </div>
   );
 };

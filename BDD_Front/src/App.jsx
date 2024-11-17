@@ -7,6 +7,7 @@ import LoginForm from './Components/LoginForm';
 import Home from './Pages/Home';
 import HomeClases from './Pages/HomeClases';
 import Navbar from './Components/Navbar';
+import ClasesAlumno from './Pages/ClasesAlumno';
 
 
 
@@ -18,12 +19,12 @@ function App() {
       <div>
         <h1>ESCUELA DE DEPORTES</h1>
     <Router>
-    <Navbar />
       <Routes>
         <Route path="/register" element={<RegisterForm />} />
         <Route path="/" element={<LoginForm />} />
         <Route path="/home" element={<Home />} />
         <Route path="/clases" element={<HomeClases />} />
+        <Route path="/clases_alumno" element={<ClasesAlumno />} />
       </Routes>
     </Router>
       </div>

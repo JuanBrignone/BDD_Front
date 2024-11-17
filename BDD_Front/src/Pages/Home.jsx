@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Card from "../Components/Card";
 import "./Home.css";
+import Navbar from "../Components/Navbar";
 
 const Home = () => {
     const [actividades, setActividades] = useState([]);
@@ -21,18 +22,21 @@ const Home = () => {
     }, []);
 
     return (
-        <div className="home-container">
-            <h1>Actividades Disponibles</h1>
-            {error && <p className="error-message">{error}</p>}
-            <div className="cards-container">
-                {actividades.map((actividad) => (
-                    <Card
-                        key={actividad.id}
-                        nombre={actividad.nombre}
-                        descripcion={actividad.descripcion}
-                        costo={actividad.costo}
-                    />
-                ))}
+        <div>
+            <Navbar />
+            <div className="home-container">
+                <h1>Actividades Disponibles</h1>
+                {error && <p className="error-message">{error}</p>}
+                <div className="cards-container">
+                    {actividades.map((actividad) => (
+                        <Card
+                            key={actividad.id}
+                            nombre={actividad.nombre}
+                            descripcion={actividad.descripcion}
+                            costo={actividad.costo}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     );

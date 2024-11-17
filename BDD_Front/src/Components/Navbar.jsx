@@ -13,6 +13,9 @@ const Navbar = () => {
                 <li>
                     <Link to="/clases">Clases</Link>
                 </li>
+                <li>
+                    <Link to="/clases_alumno">A que estoy inscripto?</Link>
+                </li>
             </ul>
         </nav>
     );
