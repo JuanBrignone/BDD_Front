@@ -44,7 +44,7 @@ const RegisterForm = () => {
       return;
     }
 
-
+    try{
     const response = await fetch("http://localhost:8000/register", {
       method: "POST",
       headers: {
@@ -68,6 +68,8 @@ const RegisterForm = () => {
       const data = await response.json();
       navigate("/login")
       setErrorMessage(data.detail || "Hubo un error al registrar.");
+    }}catch(error){
+      setErrorMessage("El alumno debe de tener al menos 18 años")
     }
   };
 

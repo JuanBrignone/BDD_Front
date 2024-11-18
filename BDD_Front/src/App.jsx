@@ -8,7 +8,8 @@ import Home from './Pages/Home';
 import HomeClases from './Pages/HomeClases';
 import Navbar from './Components/Navbar';
 import ClasesAlumno from './Pages/ClasesAlumno';
-
+import ListActividades from './Pages/ActividadesAdmin';
+import UpdateActividad from './Pages/ActualizarActividad,';
 
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/clases" element={<HomeClases />} />
         <Route path="/clases_alumno" element={<ClasesAlumno />} />
+        <Route path="/actividadesadmin" element={<ListActividades />} />
+        <Route path="/actividades/editar/:id_actividad" element={<UpdateActividad />} />  
       </Routes>
     </Router>
       </div>
