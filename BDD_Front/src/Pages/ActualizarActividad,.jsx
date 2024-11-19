@@ -59,7 +59,7 @@ const UpdateActividad = () => {
       if (response.ok) {
         const data = await response.json();
         setSuccessMessage(data.detail);
-        setTimeout(() => navigate("/actividades"), 2000); // Redirige a la lista después de 2 segundos
+        setTimeout(() => navigate("/editaradmin"));
       } else {
         const data = await response.json();
         setErrorMessage(data.detail || "Error al actualizar la actividad.");

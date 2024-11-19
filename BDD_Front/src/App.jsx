@@ -10,6 +10,8 @@ import Navbar from './Components/Navbar';
 import ClasesAlumno from './Pages/ClasesAlumno';
 import ListActividades from './Pages/ActividadesAdmin';
 import UpdateActividad from './Pages/ActualizarActividad,';
+import ActividadesPage from './Pages/AgregarActividades';
+import ClaseForm from './Pages/ClasesForm';
 
 
 function App() {
@@ -26,8 +28,10 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/clases" element={<HomeClases />} />
         <Route path="/clases_alumno" element={<ClasesAlumno />} />
-        <Route path="/actividadesadmin" element={<ListActividades />} />
+        <Route path="/editaradmin" element={<ListActividades />} />
         <Route path="/actividades/editar/:id_actividad" element={<UpdateActividad />} />  
+        <Route path="/adminactividades" element={<ActividadesPage />} />
+        <Route path="/agregarclase" element={<ClaseForm />} />
       </Routes>
     </Router>
       </div>
