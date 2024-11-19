@@ -15,6 +15,9 @@ const NavbarAdmin = () => {
                 <li>
                     <Link to="/agregarclase">Añadir clase</Link>
                 </li>
+                <li>
+                    <Link to="/actividades/populares">Actividaes Populares</Link>
+                </li>
             </ul>
         </nav>
     );

@@ -12,7 +12,13 @@ import ListActividades from './Pages/ActividadesAdmin';
 import UpdateActividad from './Pages/ActualizarActividad,';
 import ActividadesPage from './Pages/AgregarActividades';
 import ClaseForm from './Pages/ClasesForm';
+import PrivateRoute from './PrivateRoute'
+import ActividadesPopulares from './Pages/ActividadesPopulares'
 
+const isAdmin = () => {
+  const user = JSON.parse(localStorage.getItem("user"));
+  return user?.type === "admin"; 
+};
 
 function App() {
 
@@ -28,10 +34,46 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/clases" element={<HomeClases />} />
         <Route path="/clases_alumno" element={<ClasesAlumno />} />
-        <Route path="/editaradmin" element={<ListActividades />} />
-        <Route path="/actividades/editar/:id_actividad" element={<UpdateActividad />} />  
-        <Route path="/adminactividades" element={<ActividadesPage />} />
-        <Route path="/agregarclase" element={<ClaseForm />} />
+        <Route
+        path="/editaradmin"
+        element={
+            <PrivateRoute isAllowed={isAdmin()}>
+                <ListActividades />
+            </PrivateRoute>
+        }
+    />
+    <Route
+        path="/actividades/editar/:id_actividad"
+        element={
+            <PrivateRoute isAllowed={isAdmin()}>
+                <UpdateActividad />
+            </PrivateRoute>
+        }
+    />
+    <Route
+        path="/adminactividades"
+        element={
+            <PrivateRoute isAllowed={isAdmin()}>
+                <ActividadesPage />
+            </PrivateRoute>
+        }
+    />
+    <Route
+        path="/agregarclase"
+        element={
+            <PrivateRoute isAllowed={isAdmin()}>
+                <ClaseForm />
+            </PrivateRoute>
+        }
+    />
+        <Route
+        path="/actividades/populares"
+        element={
+            <PrivateRoute isAllowed={isAdmin()}>
+                <ActividadesPopulares />
+            </PrivateRoute>
+        }
+    />
       </Routes>
     </Router>
       </div>
