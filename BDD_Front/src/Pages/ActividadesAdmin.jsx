@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import NavbarAdmin from '../Components/NavbarAdmin';
+
 
 /*Muestra las actividades disponibles, con un boton de editar para poder modificarlas, redirigiendote a ActualizarActividad.jsx */
 const ListActividades = () => {
@@ -26,7 +28,9 @@ const ListActividades = () => {
   }, []);
 
   return (
-    <div className="list-container">
+    <div>
+      <NavbarAdmin />
+      <div className="list-container">
       <h2>Lista de Actividades</h2>
       {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
       <ul>
@@ -42,6 +46,7 @@ const ListActividades = () => {
           </li>
         ))}
       </ul>
+    </div>
     </div>
   );
 };

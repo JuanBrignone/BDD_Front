@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
+import NavbarAdmin from '../Components/NavbarAdmin';
 
 /*Muestra un form, para crear clases, mostrando actividades, instructores y turnos para poder crear la actividad*/
 const ClaseForm = () => {
@@ -81,6 +82,8 @@ const ClaseForm = () => {
 
   return (
     <div>
+      <NavbarAdmin />
+      <div>
       <h1>Crear Clase</h1>
 
       {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
@@ -143,6 +146,7 @@ const ClaseForm = () => {
 
         <button type="submit">Crear Clase</button>
       </form>
+    </div>
     </div>
   );
 };

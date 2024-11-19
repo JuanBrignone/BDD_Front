@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import NavbarAdmin from '../Components/NavbarAdmin';
 
 /*Muestra un form para agregar actividades, luego muestra las actividades disponibles, con un boton de eliminar, para eliminar actividades*/
 const ActividadesPage = () => {
@@ -58,6 +59,8 @@ const ActividadesPage = () => {
 
   return (
     <div>
+      <NavbarAdmin />
+      <div>
       <h1>Agregar Actividad</h1>
 
       {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
@@ -110,6 +113,7 @@ const ActividadesPage = () => {
           </li>
         ))}
       </ul>
+    </div>
     </div>
   );
 };

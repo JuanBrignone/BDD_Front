@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import NavbarAdmin from '../Components/NavbarAdmin';
+
 
 /*Una vez dado click el boton "Editar" en ActividadesAdmin.jsx, se abre un form, que permite editar las proipedades de la actividad */
 const UpdateActividad = () => {
@@ -71,7 +73,9 @@ const UpdateActividad = () => {
   };
 
   return (
-    <div className="form-container">
+    <div>
+      <NavbarAdmin />
+      <div className="form-container">
       <h2>Actualizar Actividad</h2>
       <form onSubmit={handleSubmit}>
         <div>
@@ -117,6 +121,7 @@ const UpdateActividad = () => {
           Cancelar
         </button>
       </form>
+    </div>
     </div>
   );
 };
