@@ -68,7 +68,7 @@ const RegisterForm = () => {
       const data = await response.json();
       navigate("/login")
       setErrorMessage(data.detail || "Hubo un error al registrar.");
-    }}catch(error){
+    }}catch(error){ 
       setErrorMessage("El alumno debe de tener al menos 18 años")
     }
   };

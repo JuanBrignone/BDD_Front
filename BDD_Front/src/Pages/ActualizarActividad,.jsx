@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
+/*Una vez dado click el boton "Editar" en ActividadesAdmin.jsx, se abre un form, que permite editar las proipedades de la actividad */
 const UpdateActividad = () => {
-  const { id_actividad } = useParams(); // ID de la actividad
+  const { id_actividad } = useParams(); 
   const [formData, setFormData] = useState({
     nombre: "",
     descripcion: "",
@@ -15,7 +16,7 @@ const UpdateActividad = () => {
   useEffect(() => {
     const fetchActividad = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/actividades/${id_actividad}`); // Endpoint para obtener actividad por ID
+        const response = await fetch(`http://localhost:8000/actividades/${id_actividad}`); 
         if (response.ok) {
           const data = await response.json();
           setFormData({

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+/*Muestra un form para agregar actividades, luego muestra las actividades disponibles, con un boton de eliminar, para eliminar actividades*/
 const ActividadesPage = () => {
   const [actividades, setActividades] = useState([]);
   const [formData, setFormData] = useState({ nombre: '', descripcion: '', costo: '' });

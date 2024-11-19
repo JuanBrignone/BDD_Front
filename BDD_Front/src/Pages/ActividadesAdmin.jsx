@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+/*Muestra las actividades disponibles, con un boton de editar para poder modificarlas, redirigiendote a ActualizarActividad.jsx */
 const ListActividades = () => {
   const [actividades, setActividades] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
@@ -9,7 +10,7 @@ const ListActividades = () => {
   useEffect(() => {
     const fetchActividades = async () => {
       try {
-        const response = await fetch("http://localhost:8000/actividades"); // Cambia por tu endpoint de listado
+        const response = await fetch("http://localhost:8000/actividades"); 
         if (response.ok) {
           const data = await response.json();
           setActividades(data);

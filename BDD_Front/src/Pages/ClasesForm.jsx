@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 
+/*Muestra un form, para crear clases, mostrando actividades, instructores y turnos para poder crear la actividad*/
 const ClaseForm = () => {
     const navigate = useNavigate();
     const [clases, setClases] = useState([]);

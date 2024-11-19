@@ -3,6 +3,7 @@ import Card from "../Components/Card";
 import "./Home.css";
 import Navbar from "../Components/Navbar";
 
+/*Muestra las actividades */
 const Home = () => {
     const [actividades, setActividades] = useState([]);
     const [error, setError] = useState("");

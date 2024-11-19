@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./ClasesAlumno.css";
 import Navbar from "../Components/Navbar";
 
+/*Muestra las clases de un alumno ingresando la cedula */
 const ClasesAlumno = () => {
   const [ciAlumno, setCiAlumno] = useState("");
   const [clases, setClases] = useState([]); 

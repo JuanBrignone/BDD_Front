@@ -3,6 +3,7 @@ import CardClases from "../Components/CardClases";
 import "./HomeClases.css";
 import Navbar from "../Components/Navbar";
 
+/*Muestra las clases disponibles con los horarios e instructores, permitiendo al alumno inscribirse ingresando su cedula */
 const HomeClases = () => {
   const [clases, setClases] = useState([]);
   const [error, setError] = useState("");
