@@ -18,6 +18,9 @@ const NavbarAdmin = () => {
                 <li>
                     <Link to="/actividades/populares">Actividaes Populares</Link>
                 </li>
+                <li>
+                    <Link to="/turnos/clases">Cant. de clases por turno</Link>
+                </li>
             </ul>
         </nav>
     );

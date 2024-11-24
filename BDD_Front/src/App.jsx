@@ -6,7 +6,6 @@ import RegisterForm from './Components/RegisterForm';
 import LoginForm from './Components/LoginForm';
 import Home from './Pages/Home';
 import HomeClases from './Pages/HomeClases';
-import Navbar from './Components/Navbar';
 import ClasesAlumno from './Pages/ClasesAlumno';
 import ListActividades from './Pages/ActividadesAdmin';
 import UpdateActividad from './Pages/ActualizarActividad,';
@@ -14,7 +13,7 @@ import ActividadesPage from './Pages/AgregarActividades';
 import ClaseForm from './Pages/ClasesForm';
 import PrivateRoute from './PrivateRoute'
 import ActividadesPopulares from './Pages/ActividadesPopulares'
-
+import TurnosClases from './Pages/TurnosClases'
 const isAdmin = () => {
   const user = JSON.parse(localStorage.getItem("user"));
   return user?.type === "admin"; 
@@ -71,6 +70,15 @@ function App() {
         element={
             <PrivateRoute isAllowed={isAdmin()}>
                 <ActividadesPopulares />
+            </PrivateRoute>
+        }
+    />
+
+      <Route
+        path="/turnos/clases"
+        element={
+            <PrivateRoute isAllowed={isAdmin()}>
+                <TurnosClases />
             </PrivateRoute>
         }
     />
