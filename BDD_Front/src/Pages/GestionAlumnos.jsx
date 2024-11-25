@@ -26,45 +26,7 @@
       };
       fetchAlumnos();
     }, []);
-
-    const handleDelete = async (ci_alumno) => {
-      setMessage("");
-      setError("");
     
-      try {
-        const deleteLoginResponse = await fetch(`http://localhost:8000/login/${ci_alumno}`, {
-          method: "DELETE",
-        });
-    
-        if (!deleteLoginResponse.ok) {
-          const loginError = await deleteLoginResponse.json();
-          setError(
-            loginError.detail || `Error al eliminar el registro de login del alumno con CI ${ci_alumno}.`
-          );
-          return;
-        }
-    
-        
-        const deleteAlumnoResponse = await fetch(`http://localhost:8000/alumnos/${ci_alumno}`, {
-          method: "DELETE",
-        });
-    
-        if (deleteAlumnoResponse.ok) {
-          setMessage(`Alumno con CI ${ci_alumno} eliminado exitosamente.`);
-          setAlumnos((prev) => prev.filter((alumno) => alumno.ci_alumno !== ci_alumno));
-        } else {
-          const alumnoError = await deleteAlumnoResponse.json();
-          setError(
-            alumnoError.detail || `Error al eliminar al alumno con CI ${ci_alumno} de la base de datos.`
-          );
-        }
-      } catch (err) {
-        setError("Error de conexión con el servidor.");
-      }
-    };
-    
-    
-
     return (
       <div>
       <div className="main-container">
@@ -80,7 +42,6 @@
                   <th>CI</th>
                   <th>Nombre</th>
                   <th>Apellido</th>
-                  <th></th>
                 </tr>
               </thead>
               <tbody>
@@ -89,14 +50,6 @@
                     <td>{alumno.ci_alumno}</td>
                     <td>{alumno.nombre}</td>
                     <td>{alumno.apellido}</td>
-                    <td>
-                      <button
-                        onClick={() => handleDelete(alumno.ci_alumno)}
-                        className="delete-btn"
-                      >
-                        Eliminar
-                      </button>
-                    </td>
                   </tr>
                 ))}
               </tbody>
