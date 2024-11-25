@@ -27,6 +27,9 @@ const NavbarAdmin = () => {
                 <li>
                     <Link to="/gestionalumnos">Alumnos</Link>
                 </li>
+                <li>
+                    <Link to="/ingresos_totales">Ingresos de las clases</Link>
+                </li>
             </ul>
         </nav>
     );
