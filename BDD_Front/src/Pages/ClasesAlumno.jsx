@@ -9,7 +9,6 @@ const ClasesAlumno = () => {
   const [error, setError] = useState(""); 
   const [successMessage, setSuccessMessage] = useState("");
 
-  // Manejar el envío del formulario
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(""); 
@@ -34,7 +33,6 @@ const ClasesAlumno = () => {
     }
   };
 
-  // Elimina un alumno de la clase
   const handleDelete = async (idClase) => {
     try {
       setError("");

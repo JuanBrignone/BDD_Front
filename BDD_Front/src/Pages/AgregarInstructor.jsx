@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./AgregarInstructor.css";
 import NavbarAdmin from "../Components/NavbarAdmin";
 
+/*Agrega instructores */
+
 const AgregarInstructor = () => {
   const [formData, setFormData] = useState({
     ci_instructor: "",

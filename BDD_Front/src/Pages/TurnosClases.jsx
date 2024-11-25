@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import NavbarAdmin from "../Components/NavbarAdmin";
 
+/*Muestra los turnos disponibles con la cantidad de clases que se dictan en cada turno */
+
 const TurnosClases = () => {
   const [turnosClases, setTurnosClases] = useState([]);
 

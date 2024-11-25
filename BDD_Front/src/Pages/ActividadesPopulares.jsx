@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./ActividadesPopulares.css";
 import NavbarAdmin from '../Components/NavbarAdmin';
 
+/*Muestra las Actividades con la cantidad de alumnos inscriptos */
 
 const ActividadesPopulares = () => {
   const [actividades, setActividades] = useState([]);
