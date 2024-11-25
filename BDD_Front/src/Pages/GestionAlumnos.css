@@ -1,0 +1,33 @@
+.main-container {
+    padding: 20px;
+  }
+  
+  .alumnos-list {
+    margin-top: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table th,
+  table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .delete-btn {
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  .delete-btn:hover {
+    background-color: #ff1a1a;
+  }
+  

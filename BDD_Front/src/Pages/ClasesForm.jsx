@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import NavbarAdmin from '../Components/NavbarAdmin';
+import './ClasesForm.css';
+
 
 /*Muestra un form, para crear clases, mostrando actividades, instructores y turnos para poder crear la actividad*/
 const ClaseForm = () => {

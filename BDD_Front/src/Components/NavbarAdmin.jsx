@@ -16,10 +16,16 @@ const NavbarAdmin = () => {
                     <Link to="/agregarclase">Añadir clase</Link>
                 </li>
                 <li>
-                    <Link to="/actividades/populares">Actividaes Populares</Link>
+                    <Link to="/actividades/populares">Actividades Populares</Link>
                 </li>
                 <li>
                     <Link to="/turnos/clases">Cant. de clases por turno</Link>
+                </li>
+                <li>
+                    <Link to="/instructores">Agregar/Eliminar Instructores</Link>
+                </li>
+                <li>
+                    <Link to="/gestionalumnos">Alumnos</Link>
                 </li>
             </ul>
         </nav>

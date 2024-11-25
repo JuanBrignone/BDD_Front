@@ -14,6 +14,8 @@ import ClaseForm from './Pages/ClasesForm';
 import PrivateRoute from './PrivateRoute'
 import ActividadesPopulares from './Pages/ActividadesPopulares'
 import TurnosClases from './Pages/TurnosClases'
+import AgregarInstructor from './Pages/AgregarInstructor';
+import GestionAlumno from './Pages/GestionAlumnos';
 const isAdmin = () => {
   const user = JSON.parse(localStorage.getItem("user"));
   return user?.type === "admin"; 
@@ -79,6 +81,23 @@ function App() {
         element={
             <PrivateRoute isAllowed={isAdmin()}>
                 <TurnosClases />
+            </PrivateRoute>
+        }
+    />
+       <Route
+        path="/instructores"
+        element={
+            <PrivateRoute isAllowed={isAdmin()}>
+                <AgregarInstructor />
+            </PrivateRoute>
+        }
+    />
+
+        <Route
+        path="/gestionalumnos"
+        element={
+            <PrivateRoute isAllowed={isAdmin()}>
+                <GestionAlumno />
             </PrivateRoute>
         }
     />
